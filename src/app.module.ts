@@ -1,10 +1,10 @@
-import { AppController } from './app.controller';
-import { EnvModule } from './env/env.module';
+import { AppController } from '@/app.controller';
+import { EnvModule } from '@/env/env.module';
 import { ConfigModule } from '@nestjs/config';
-import { PrismaService } from 'prisma.service';
+import { AppService } from '@/app.service';
 import { Module } from '@nestjs/common';
-import { AppService } from './app.service';
-import { envSchema } from './env/env';
+import { PrismaService } from '@/prisma';
+import { envSchema } from '@/env/env';
 @Module({
   imports: [
     ConfigModule.forRoot({
