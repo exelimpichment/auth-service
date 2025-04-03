@@ -3,8 +3,8 @@ import { EnvModule } from '@/env/env.module';
 import { ConfigModule } from '@nestjs/config';
 import { AppService } from '@/app.service';
 import { Module } from '@nestjs/common';
-import { PrismaService } from '@/prisma';
 import { envSchema } from '@/env/env';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -14,6 +14,6 @@ import { envSchema } from '@/env/env';
     EnvModule,
   ],
   controllers: [AppController],
-  providers: [AppService, PrismaService],
+  providers: [AppService],
 })
 export class AppModule {}
